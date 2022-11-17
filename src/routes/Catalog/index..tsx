@@ -1,5 +1,4 @@
 import "./styles.css";
-import computerImg from "../../assets/computer.png";
 import HeaderClient from "../../components/headerClient";
 import SearchBar from "../../components/SearchBar";
 import CatalogCard from "../../components/CatalogCard";
