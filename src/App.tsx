@@ -1,11 +1,11 @@
 
-import ProductDetails from './routes/ProductDetails';
+import Catalog from './routes/Catalog/index.';
 
 export default function App() {
 
   return (
     <>
-      <ProductDetails />
+      <Catalog />
     </>
     
 
