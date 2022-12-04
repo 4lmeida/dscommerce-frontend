@@ -2,41 +2,60 @@ import "./styles.css";
 import SearchBar from "../../../components/SearchBar";
 import CatalogCard from "../../../components/CatalogCard";
 import ButtonNextPage from "../../../components/ButtonNextPage";
-import * as ProductService from '../../../Services/product-service';
+import * as ProductService from "../../../services/product-service";
 import { useEffect, useState } from "react";
 import { ProductDTO } from "../../../models/product";
 
+type QueryParams = {
+  page: number;
+  name: string;
+};
 
 export default function Catalog() {
+  const [isLastPage, setIsLastPage] = useState(false);
 
   const [products, setProducts] = useState<ProductDTO[]>([]);
 
-  const [productName, setProductName] = useState("");
+  const [queryParams, setQueeryParams] = useState<QueryParams>({
+    page: 0,
+    name: "",
+  });
 
   useEffect(() => {
-    ProductService.findPageRequest(0, productName)
-      .then(response => {
-        setProducts(response.data.content);
-      })
-  }, [productName]);
+    ProductService.findPageRequest(queryParams.page, queryParams.name).then(
+      (response) => {
+        const nextPage = response.data.content;
+        setProducts(products.concat(nextPage));
+        setIsLastPage(response.data.last);
+      }
+    );
+  }, [queryParams]);
 
   function handleSearch(searchText: string) {
-    setProductName(searchText);
+    setProducts([]);
+    setQueeryParams({ ...queryParams, page: 0, name: searchText });
+  }
+
+  function handleNextPageClick() {
+    setQueeryParams({ ...queryParams, page: queryParams.page + 1 });
   }
 
   return (
     <main>
       <section id="catalog-details-section " className="dsc-container">
-        <SearchBar onSearch={handleSearch}/>
+        <SearchBar onSearch={handleSearch} />
 
         <div className="dsc-catalog-cards dsc-mb20 dsc-mt20">
-          {
-            products.map(
-              product => <CatalogCard key={product.id} product={product} />)
-          }
+          {products.map((product) => (
+            <CatalogCard key={product.id} product={product} />
+          ))}
         </div>
 
-        <ButtonNextPage text="Carregar Mais" />
+        {   !isLastPage &&
+          <div onClick={handleNextPageClick}>
+            <ButtonNextPage text="Carregar Mais" />
+          </div>
+        }
       </section>
     </main>
   );

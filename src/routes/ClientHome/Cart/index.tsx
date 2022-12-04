@@ -1,5 +1,5 @@
 import "./styles.css";
-import * as cartService from "../../../Services/cart-service";
+import * as cartService from "../../../services/cart-service";
 import { OrderDTO } from "../../../models/order";
 import { useState } from "react";
 import { Link } from "react-router-dom";
