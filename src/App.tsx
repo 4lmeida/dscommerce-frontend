@@ -3,6 +3,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import ClientHome from "./routes/ClientHome";
 import Cart from "./routes/ClientHome/Cart";
 import Catalog from "./routes/ClientHome/Catalog/index.";
+import Login from "./routes/ClientHome/Login";
 import ProductDetails from "./routes/ClientHome/ProductDetails";
 import { ContexCartCount } from "./utils/context-cart";
 
@@ -17,10 +18,9 @@ export default function App() {
             <Route index element={<Catalog />} />
             <Route path="catalog" element={<Catalog />} />
             <Route
-              path="product-details/:productId"
-              element={<ProductDetails />}
-            />
+              path="product-details/:productId"element={<ProductDetails />}/>
             <Route path="cart" element={<Cart />} />
+            <Route path="login" element={<Login />} />
           </Route>
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
