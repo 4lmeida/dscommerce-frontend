@@ -2,6 +2,7 @@ import './styles.css';
 import { useEffect, useState } from 'react';
 import { UserDTO } from '../../../models/user';
 import * as userService from '../../../services/user-service';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function AdminHome() {
@@ -12,10 +13,8 @@ export default function AdminHome() {
         userService.findMe()
             .then(response => {
                 setUser(response.data);
-            })
-            .catch(error => {
-                console.log("Error", error);
-            })
+                console.log(response.data);
+            });
     }, []);
 
     return(
