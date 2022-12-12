@@ -2,7 +2,7 @@ import "./styles.css";
 import SearchBar from "../../../components/SearchBar";
 import CatalogCard from "../../../components/CatalogCard";
 import ButtonNextPage from "../../../components/ButtonNextPage";
-import * as ProductService from "../../../services/product-service";
+import * as productService from "../../../services/product-service";
 import { useEffect, useState } from "react";
 import { ProductDTO } from "../../../models/product";
 
@@ -22,7 +22,7 @@ export default function Catalog() {
   });
 
   useEffect(() => {
-    ProductService.findPageRequest(queryParams.page, queryParams.name).then(
+    productService.findPageRequest(queryParams.page, queryParams.name).then(
       (response) => {
         const nextPage = response.data.content;
         setProducts(products.concat(nextPage));
