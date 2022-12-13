@@ -42,10 +42,6 @@ export default function ProductForm() {
 
   useEffect(() => {
     if(isEditing) {
-
-      const result = forms.toDirty(formData, "price");
-      console.log(result);
-
       productService.findById(Number(params.productId))
         .then(response => {
           setFormData(forms.updateAll(formData, response.data));
@@ -54,13 +50,10 @@ export default function ProductForm() {
   }, []);
 
   function handleInputChange(event: any) {
-    const dataUpdated = forms.update(formData,  event.target.name, event.target.value);
-    const dataValidated = forms.validate(dataUpdated, event.target.name);
-    setFormData(dataValidated);
+    setFormData(forms.updateAndValidate(formData,  event.target.name, event.target.value));
   }
   function handleTurnDirty(name: string) {
-    const newFormDate = forms.toDirty(formData, name);
-    setFormData(newFormDate);
+    setFormData(forms.dirtyAndValidate(formData, name));
   }
 
     return(
