@@ -3,12 +3,15 @@ import homeIcon from '../../assets/home.svg';
 import productsIcon from '../../assets/product.svg';
 import LoggedUser from "../LoggedUser";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function HeaderAdmin() {
   return (
 <header className="dsc-header-admin">
       <nav className="dsc-container">
-        <h1>DSCommerce</h1>
+        <Link to='/'>
+          <h1>DSCommerce</h1>
+        </Link>
         <div className="dsc-navbar-right">
           <div className="dsc-menu-items-container">
             <NavLink 
