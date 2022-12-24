@@ -24,7 +24,7 @@
 ## Descrição do projeto 
 
 <p align="justify">
- DSCommerce é uma aplicação web de front-end e back-end  construida ao longo da formação no curso "Formação Desenvolvedor Moderno" na [DevSuperior](https://devsuperior.com.br/cursos) - escola de programação.
+DSCommerce é uma aplicação web de front-end e back-end  construida ao longo da formação no curso "Formação Desenvolvedor Moderno" na DevSuperior - escola de programação.
 
 A aplicação é baseada em um comercio eletrônico que você navega autenticado(logado) ou não logado, atráves dos produtos podendo adiciona-lo no carrinho e finalizar o seu pedido mas, para finalazar o pedido você precisa está logado, e a aplicação disponibiliza dois tipo de acesso que é cliente ou admin. O admin consegue estar realizando cadastro, edição e exclusão de produtos na aplicação.
 </p>
