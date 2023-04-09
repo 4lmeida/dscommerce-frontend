@@ -48,8 +48,29 @@ DSCommerce é uma sistema web de front-end e back-end construida ao longo da for
 
 > Link do deploy da aplicação. Netlify: https://dscommerce-l4.netlify.app
 
-![]()
+- Tour no site
 
+![Tour](/src/assets/dscommerce-tour-site.gif)
+
+- Login
+
+![Login](/src/assets/dscommerce-login.png)
+
+- Catalago
+
+![catalago](/src/assets/dscommerce-catalogo.png)
+
+- Detalhes do produto
+
+![Detais](/src/assets/dscommerce-detais.png)
+
+- Carrinho
+
+![Cart](/src/assets/dscommerce-cart.png)
+
+- Confirmação do pedido 
+
+![Confimation](/src/assets/dscommerce-confirmation.png)
 
 
 ## Pré-requisitos
