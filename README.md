@@ -16,7 +16,7 @@
 
 :small_blue_diamond: [Funcionalidades](#funcionalidades)
 
-:small_blue_diamond: [Deploy da Aplicação](#deploy-da-aplicação-dash)
+:small_blue_diamond: [Deploy da Aplicação](#layout-e-deploy-da-aplicação-dash)
 
 :small_blue_diamond: [Pré-requisitos](#pré-requisitos)
 
@@ -119,8 +119,7 @@ decrementar a quantidade de um item no carrinho de compras.
 - [Yarn](https://classic.yarnpkg.com/en/)
 - [Node](https://nodejs.org/en/download/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [JavaScript]()
-- [Axios]([https://reactrouter.com/en/main](https://yarnpkg.com/package/axios))
+- [Axios](https://yarnpkg.com/package/axios)
 - [Effect Hook](https://legacy.reactjs.org/docs/hooks-effect.html)
 - [useState](https://legacy.reactjs.org/docs/hooks-state.html)
 - [React Select](https://react-select.com/home)
