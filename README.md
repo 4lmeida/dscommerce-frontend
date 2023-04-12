@@ -159,6 +159,6 @@ decrementar a quantidade de um item no carrinho de compras.
 
 The [MIT License](https://github.com/4lmeida/dscommerce-frontend/blob/main/LICENSE)(MIT)
 
-Copyright :copyright: Ano - 2022 DSCommerce
+Copyright :copyright: 2022 - DSCommerce
 
 :top: [Voltar para o top](#Tópicos)
